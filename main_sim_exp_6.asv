@@ -140,7 +140,8 @@ title('torque sensor')
 figure(fignum+3)
 plot( tempo , in_cur );grid;shg
 hold
-plot( time_rspl  , -cur_mes_rspl  ,':r');shg
+plot(tempo,out_trq_off,'r');shg
+plot(sim_time.Data,-sim_oupt.Data,':c');shg
 hold
-legend('Reference Current','Measured current')
-title('Motor Current')
+legend('exp data resampled','exp data','sim data')
+title('torque sensor')
